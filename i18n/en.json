@@ -1,0 +1,14 @@
+{
+    "start_talking": "Start Talking",
+    "send": "Send",
+    "heard": "Heard",
+    "response": "Response",
+    "language": "Language",
+    "app_title": "Disaster Assistant",
+    "welcome_message": "How can I assist you today?",
+    "offline_mode": "You're currently in offline mode.",
+    "help_needed": "Help is needed nearby!",
+    "ask_ai": "Ask the Assistant",
+    "no_response": "Unable to get response. Try again."
+  }
+  
