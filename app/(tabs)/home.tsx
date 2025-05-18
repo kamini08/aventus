@@ -2,6 +2,7 @@ import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Button } from "react-native-paper";
 
 const Home: React.FC = () => {
 
@@ -9,9 +10,15 @@ const Home: React.FC = () => {
 
   return (
     <View style={styles.root}>
+      
       <View style={styles.header}>
         <Ionicons name="shield-checkmark" size={26} color="#e74c3c" />
         <Text style={styles.headerText}>Silent Signals</Text>
+      </View>
+
+      <View style={styles.header}>
+        
+        <Button onPress={()=>{router.replace(`https://093c-14-99-167-142.ngrok-free.app/`)}}>Go to website!</Button>
       </View>
 
       <Text style={styles.title}>Emergency{"\n"}Response Platform</Text>
