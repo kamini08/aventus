@@ -24,7 +24,7 @@ const WelcomeScreen: React.FC = () => {
       </Text>
       <Button
         mode="contained"
-        onPress={() => router.push("./(tabs)/home")}
+        onPress={() => router.push("./home")}
         style={styles.button}
       >
         Get Started

@@ -10,8 +10,7 @@ const UserDashboard: React.FC = () => {
   function sendAlert(e: any): void {
     throw new Error("Function not implemented.");
   }
-
-  // Initialize SQLite database
+  
   
   return (
     <View style={styles.container}>
@@ -81,6 +80,7 @@ const UserDashboard: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    
     padding: 10,
     backgroundColor: "#F5F5F5",
     fontFamily: "SpaceMono",
