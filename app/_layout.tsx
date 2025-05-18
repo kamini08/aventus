@@ -2,11 +2,10 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { useColorScheme } from '@/hooks/useColorScheme';
 import 'react-native-reanimated';
 import { Provider as PaperProvider, MD3LightTheme } from 'react-native-paper';
-import { useColorScheme } from '@/hooks/useColorScheme';
 
-// Combine Paper theme with Navigation theme
 const paperTheme = {
   ...MD3LightTheme,
   colors: {
@@ -19,13 +18,13 @@ const paperTheme = {
 };
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme() || 'light';
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
   if (!loaded) {
-    return null;
+    return <></>;
   }
 
   return (

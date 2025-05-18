@@ -1,6 +1,13 @@
 import { Device } from "react-native-ble-plx";
 
-export type RootStackParamList = {
-  EmergencyAssistanceScreen: { connectedDevice: Device };
-  // Add other screens if needed
-};
+export interface MeshMessage {
+    id: string;
+    senderId: string;
+    timestamp: number;
+    message: string;
+    location: {
+      lat: number;
+      lng: number;
+    };
+    ttl: number;
+  }

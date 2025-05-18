@@ -2,54 +2,17 @@ import { router } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { Button, Text, Card, Searchbar } from "react-native-paper";
-import SQLite, { SQLiteDatabase } from "react-native-sqlite-storage";
 
 const UserDashboard: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [alertSent, setAlertSent] = useState(false);
-  const [db, setDb] = useState<SQLiteDatabase | null>(null);
+
+  function sendAlert(e: any): void {
+    throw new Error("Function not implemented.");
+  }
 
   // Initialize SQLite database
-  useEffect(() => {
-    const database = SQLite.openDatabase(
-      {
-        name: "SilentSignals.db",
-        location: "default",
-      },
-      (db) => {
-        setDb(db);
-        db.executeSql(
-          "CREATE TABLE IF NOT EXISTS Alerts (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT, timestamp INTEGER)",
-          [],
-          () => console.log("Alerts table created"),
-          (error) => console.error("Failed to create table:", error)
-        );
-      },
-      (error) => {
-        console.error("Failed to open database:", error);
-      }
-    );
-    return () => {
-      database.close();
-    };
-  }, []);
-
-  const sendAlert = async () => {
-    if (db) {
-      try {
-        await db.executeSql(
-          "INSERT INTO Alerts (message, timestamp) VALUES (?, ?)",
-          ["Emergency Alert", Date.now()]
-        );
-        setAlertSent(true);
-      } catch (error) {
-        console.error("Failed to save alert:", error);
-      }
-    } else {
-      console.warn("Cannot send alert: Database not initialized");
-    }
-  };
-
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>

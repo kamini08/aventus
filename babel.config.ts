@@ -1,6 +1,6 @@
 interface BabelConfig {
-    presets: string[];
-    plugins: string[];
+    presets: ['babel-preset-expo'],
+    plugins: ['react-native-reanimated/plugin'],
 }
 
 interface BabelAPI {

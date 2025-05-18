@@ -6,6 +6,19 @@
     "lib": [
       "es2017"
     ],
+    "types": [
+      "node",
+      "babel__core",
+      "babel__generator",
+      "babel__template",
+      "babel__traverse",
+      "estree",
+      "geojson",
+      "hammerjs",
+      "istanbul-lib-report",
+      "istanbul-reports",
+      "json-schema"
+    ],
     "allowJs": true,
     "jsx": "react-native",
     "noEmit": true,

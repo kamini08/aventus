@@ -8,10 +8,6 @@
     "scheme": "silentsignals",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.silentsignals"
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -52,6 +48,9 @@
       "eas": {
         "projectId": "b98c6a44-a66c-443f-8b43-8d7b54e5a22b"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.silentsignals"
     }
   }
 }

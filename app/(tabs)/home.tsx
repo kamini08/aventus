@@ -23,7 +23,7 @@ const Home: React.FC = () => {
 
       <TouchableOpacity
         style={[styles.card, styles.helpCard]}
-        onPress={() => router.push("../needHelp")}>
+        onPress={() => router.replace("../needHelp")}>
         <View style={styles.iconCircleBlue}>
           <Ionicons name="shield-outline" size={32} color="#fff" />
         </View>
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
 
       <TouchableOpacity
         style={[styles.card, styles.responderCard]}
-        onPress={() => router.push("./(tabs)/respond")}>
+        onPress={() => router.replace("./map")}>
         <View style={styles.iconCircleOrange}>
           <MaterialCommunityIcons
             name="account-cog-outline"

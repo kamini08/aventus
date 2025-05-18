@@ -9,7 +9,7 @@ const WelcomeScreen: React.FC = () => {
   // Optionally auto-redirect to User Dashboard
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace("/user");
+      router.replace("/needHelp");
     }, 3000); 
     return () => clearTimeout(timer);
   }, [router]);
